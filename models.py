@@ -2,7 +2,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 def load_model():
-    model_path = "model"
+    model_path = "sathish2352/email-classifier-model"
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForSequenceClassification.from_pretrained(model_path)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
